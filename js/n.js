@@ -108,6 +108,58 @@ function toggleTheme() {
 
 //__________________________________________________________________________
 
+//LANGUAJES
+
+$(document).ready(function () {
+  // Al hacer clic en el enlace con id "language-toggle"
+  $("#language-toggle").on("click", function (e) {
+    e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+
+    // Alternar la visibilidad de las opciones de idioma
+    $(".language-options").toggle();
+  });
+});
+
+//_______________________________________________________________________
+
+jQuery(
+  '<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>'
+).insertAfter(".quantity input");
+jQuery(".quantity").each(function () {
+  var spinner = jQuery(this),
+    input = spinner.find('input[type="number"]'),
+    btnUp = spinner.find(".quantity-up"),
+    btnDown = spinner.find(".quantity-down"),
+    min = input.attr("min"),
+    max = input.attr("max");
+
+  btnUp.click(function () {
+    var oldValue = parseFloat(input.val());
+    if (oldValue >= max) {
+      var newVal = oldValue;
+    } else {
+      var newVal = oldValue + 1;
+    }
+    spinner.find("input").val(newVal);
+    //SelectorSlide.val(newVal);.    /*aquí pone el selector del slide*/
+    spinner.find("input").trigger("change");
+  });
+
+  btnDown.click(function () {
+    var oldValue = parseFloat(input.val());
+    if (oldValue <= min) {
+      var newVal = oldValue;
+    } else {
+      var newVal = oldValue - 1;
+    }
+    spinner.find("input").val(newVal);
+    //SelectorSlide.val(newVal);        /*aquí pone el selector del slide*/
+    spinner.find("input").trigger("change");
+  });
+});
+
+//-------------
+
 document.addEventListener('DOMContentLoaded', function () {
   const languageToggle = document.getElementById('language-toggle');
 
@@ -159,46 +211,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const defaultLanguage = 'en'; // Cambia a 'es' si deseas el idioma español por defecto
   changeLanguage(defaultLanguage);
 });
-//_______________________________________________________________________
-
-jQuery(
-  '<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>'
-).insertAfter(".quantity input");
-jQuery(".quantity").each(function () {
-  var spinner = jQuery(this),
-    input = spinner.find('input[type="number"]'),
-    btnUp = spinner.find(".quantity-up"),
-    btnDown = spinner.find(".quantity-down"),
-    min = input.attr("min"),
-    max = input.attr("max");
-
-  btnUp.click(function () {
-    var oldValue = parseFloat(input.val());
-    if (oldValue >= max) {
-      var newVal = oldValue;
-    } else {
-      var newVal = oldValue + 1;
-    }
-    spinner.find("input").val(newVal);
-    //SelectorSlide.val(newVal);.    /*aquí pone el selector del slide*/
-    spinner.find("input").trigger("change");
-  });
-
-  btnDown.click(function () {
-    var oldValue = parseFloat(input.val());
-    if (oldValue <= min) {
-      var newVal = oldValue;
-    } else {
-      var newVal = oldValue - 1;
-    }
-    spinner.find("input").val(newVal);
-    //SelectorSlide.val(newVal);        /*aquí pone el selector del slide*/
-    spinner.find("input").trigger("change");
-  });
-});
-
-
-
 
 //------------------------------------------------------------------------
 
