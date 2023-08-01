@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Google fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/n.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+</head>
+
+
+<div class="container-bike">
+  <svg class="bike" viewBox="0 0 48 30" width="48px" height="30px">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <g transform="translate(9.5,19)">
+        <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+        <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+          <circle class="bike__spokes" r="5" />
+          <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+        </g>
+      </g>
+      <g transform="translate(24,19)">
+        <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133" stroke-dashoffset="-21.991"
+          transform="rotate(67.5,0,0)">
+          <circle class="bike__pedals" r="4" />
+          <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
+        </g>
+      </g>
+      <g transform="translate(38.5,19)">
+        <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+        <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
+          <circle class="bike__spokes" r="5" />
+          <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+        </g>
+      </g>
+      <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5" />
+      <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19" stroke-dasharray="79 79" />
+      <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10" />
+      <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
+    </g>
+  </svg>
+</div>
+
+
+
+
+<body>
+  <!-- Dentro de la etiqueta <body> -->
+  <div id="loading-overlay">
+    <div class="loading-bar"></div>
+  </div>
+
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2 style="color: white;">Portfolio</h2>
+      <div class="reloj-container" id="reloj-container">
+        <div id="relojnumerico" class="reloj"></div>
+      </div>
+      <button class="close-btn" id="closeSidebar">&times;</button>
+    </div>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+      </li>
+      <li>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+      </li>
+      <li>
+        <a href="#projects"><i class="fas fa-folder-open"></i> Projects</a>
+      </li>
+      <li>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      </li>
+
+      <li>
+        <button href="#" id="config-toggle">
+          <i class="fas fa-cog"></i> Settings
+        </button>
+      </li>
+    </ul>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="config-sidebar" id="config-sidebar">
+      <div class="config-sidebar-header">
+        <h2><i class="fas fa-cog"></i> Settings</h2>
+        <button class="close-btn" id="closeConfigSidebar">&times;</button>
+      </div>
+      <ul class="config-sidebar-menu">
+        <li>
+          <a href="#" id="theme-toggle"><i class="fas fa-adjust"></i>Theme</a>
+        </li>
+        <li>
+          <a href="#" id="language-toggle"><i class="fas fa-language"></i> Language</a>
+
+          <div class="language-options">
+            <span class="flags-es">
+              <i class="fi fi-es"></i>
+              Español
+            </span>
+            <span class="flags-us">
+              <i class="fi fi-us"></i>
+              English
+            </span>
+          </div>
+        </li>
+
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="content">
+    <header>
+      <div class="seccion1">
+        <button class="open-btn" id="open-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h2 style="color: white; margin: 0;">Portfolio</h2>
+      </div>
+      <div id="songName">
+        <i class="fas fa-music"></i>
+      </div>
+
+      <div class="music-player" id="music-player">
+        <div class="volume-control">
+          <i class="fas fa-volume-up volume-icon" id="volumeIcon"></i>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </div>
+        <button id="playButton">
+          <i id="playIcon" class="fas fa-play"></i>
+          <i id="pauseIcon" class="fas fa-pause" style="display: none;"></i>
+        </button>
+        <audio id="audioPlayer" loop>
+          <source src="../src/music/Overexpressed.mp3" type="audio/mpeg" />
+          <source src="../src/music/Arrival.mp3" type="audio/mpeg" />
+          <source src="../src/music/toby fox - UNDERTALE Soundtrack - 65 CORE.mp3" type="audio/mpeg" />
+          <!-- Agregar aquí las URLs de todas las canciones adicionales -->
+          Tu navegador no soporta la reproducción de audio.
+        </audio>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+        <div class="time">0%</div>
+        <button class="prev-button"><i class="fas fa-backward"></i></button>
+        <button class="next-button"><i class="fas fa-forward"></i></button>
+      </div>
+    </header>
+
+
+    <main>
+      <section class="home" id="home">
+        <video class="video_home" autoplay muted loop>
+          <source src="../src/video/blurred_video_of_scripts_being_typed (1080p).mp4" />
+        </video>
+        <div class="text-container">
+          <h2 class="animated-text">Hi</h2>
+          <p class="animated-text">Welcome to My Portfolio</p>
+          <p class="animated-text">
+            My name is <span class="yellow">Luis</span> and I am a Frontend
+            Developer
+          </p>
+        </div>
+      </section>
+
+      <!-- About me -->
+
+      <section id="about">
+        <figure class="container-img">
+          <img class="section-img" src="../src/img/florian-olivo-JNz9bQD3Oio-unsplash.jpg" data-aos="fade-up" />
+        </figure>
+        <div class="container-about__contend">
+          <div class="section-about">
+            <h2 data-section="about" data-value="title-about">About me</h2>
+            <p data-section="about" data-value="description-about">
+              I am a <strong><em>highly skilled</em></strong> web developer
+              with expertise in <u>HTML, CSS, and JavaScript</u>. My
+              experience includes working on various projects, such as
+              developing a
+              <strong><em>React-based to-do list</em></strong> and completing
+              multiple <strong><em>student projects</em></strong> and many
+              more things. Additionally, I have a wide range of proficiencies
+              in other areas of web development. I am continuously expanding
+              my knowledge and staying updated with the latest industry
+              trends.
+            </p>
+          </div>
+          <div class="section-about">
+            <h2>Strengths</h2>
+            <p>
+              I have <strong>strong web development skills</strong> and a
+              <strong>remarkable ability to learn quickly</strong>. I enjoy
+              working in a team, where I can
+              <strong>contribute innovative ideas</strong>, collaborate in
+              creating effective strategies, and maintain
+              <strong>clear and open communication</strong>. I strongly
+              believe in the power of teamwork to achieve
+              <strong>outstanding results</strong>. My passion for programming
+              and web design drives me to constantly seek new opportunities
+              for learning and growth. I am committed to providing
+              <strong>high-quality solutions</strong> and overcoming
+              challenges with <strong>creativity and efficiency</strong>. I am
+              excited to collaborate on
+              <strong>challenging projects</strong> and be part of a dynamic
+              and collaborative team that pursues excellence in web
+              development.
+            </p>
+          </div>
+          <div class="section-about">
+            <h3>My Integral Approach to Web Development:</h3>
+            <span class="subtitle">Differentiating Myself as a Professional</span>
+            <p>
+              What sets me apart as a professional is my
+              <strong>results-oriented approach</strong> and my
+              <strong>passion for excellence</strong> in web development. I
+              possess a unique combination of
+              <strong>technical and creative skills</strong>, which allows me
+              to approach projects from a
+              <strong>holistic perspective</strong>. My deep knowledge in
+              <strong>HTML, CSS, and JavaScript</strong>, along with my
+              experience in designing
+              <strong>attractive and functional user interfaces</strong>,
+              allows me to create
+              <strong>high-quality web experiences</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="projects">
+        <div class="container-info">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="container-card">
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/Todo.png" alt="Project 1" />
+            </div>
+            <div class="card-title">Todo Machine 📚</div>
+            <div class="card-description">
+              📚 Una lista de pendientes sencilla, tiene las funciones
+              normales, como agregar, eliminara, y completar tus tareas,
+              también te damos la opción de poder filtras tus pendientes. Así
+              que te invito a probar esta app
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/Colo-colo.png" alt="Project 2" />
+            </div>
+            <div class="card-title">Project 2</div>
+            <div class="card-description">
+              Es una pequeña pagina realizada con bootstap para agilizar el
+              trabajo, esta pagina es de futbol donde muestra algunos
+              entranamientos, los profesores, y tiene un pequeño formulario de
+              registro
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/computer.png" alt="Project 3" />
+            </div>
+            <div class="card-title">Project 3</div>
+            <div class="card-description">
+              Description of Project 1 goes here
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/Articlehtml.png" alt="Project 4" />
+            </div>
+            <div class="card-title">Project 4</div>
+            <div class="card-description">
+              Description of Project 1 goes here
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/birds.png" alt="Project 5" />
+            </div>
+            <div class="card-title">Project 5</div>
+            <div class="card-description">
+              Description of Project 1 goes here
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/computer-2.png" alt="Project 6" />
+            </div>
+            <div class="card-title">Project 6</div>
+            <div class="card-description">
+              Description of Project 1 goes here
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/Quizz.png" alt="Project 7" />
+            </div>
+            <div class="card-title">Project 7</div>
+            <div class="card-description">
+              Description of Project 1 goes here
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/calculadora.png" alt="Project 8" />
+            </div>
+            <div class="card-title">Project 8</div>
+            <div class="card-description">
+              Description of Project 1 goes here
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <div class="card-img">
+              <img src="../src/img/form.png" alt="Project 9" />
+            </div>
+            <div class="card-title">Project 9</div>
+            <div class="card-description">
+              Description of Project 1 goes here
+            </div>
+            <!-- Descripción oculta -->
+            <div class="contact"></div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div id="message-container" style="display: none;"></div>
+        <form method="post" autocomplete="off">
+          <div class="background">
+            <div class="container">
+              <div class="screen">
+                <div class="screen-header">
+                  <div class="screen-header-left">
+                    <div class="screen-header-button close"></div>
+                    <div class="screen-header-button maximize"></div>
+                    <div class="screen-header-button minimize"></div>
+                  </div>
+                  <div class="screen-header-right">
+                    <div class="container-ellipsis tooltip_2">
+                      <div class="screen-header-ellipsis"></div>
+                      <div class="screen-header-ellipsis"></div>
+                      <div class="screen-header-ellipsis"></div>
+                    </div>
+                    <!-- Ventana emergente -->
+                    <div id="popup-container" class="popup-container">
+                      <div class="popup-content">
+                        <h2>Datos de la base de datos</h2>
+                        <div id="data-container"></div>
+                        <a href="#" id="close-popup">Cerrar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-body">
+                  <div class="screen-body-item left">
+                    <div class="app-title">
+                      <span>Contact</span>
+                    </div>
+                    <div class="app-contact">Contact: luiscandelo30@gmail.com</div>
+                  </div>
+                  <div class="screen-body-item">
+                    <div class="app-form">
+                      <div class="app-form-group">
+                        <input type="text" name="Name" placeholder="Name" class="app-form-control" require
+                          autocomplete="off" />
+                      </div>
+                      <div class="app-form-group">
+                        <input type="email" name="email" placeholder="email" class="app-form-control"
+                          autocomplete="off" />
+                      </div>
+                      <div class="app-form-group  quantity">
+                        <input type="number" name="number" placeholder="Number" class="app-form-control"
+                          autocomplete="off" />
+                      </div>
+                      <div class="app-form-group message">
+                        <input class="app-form-control" placeholder="MESSAGE">
+                      </div>
+                      <div class="app-form-group buttons">
+                        <input type="reset" value="Borrar" class="app-form-button" />
+                        <input type="submit" name="register" value="Enviar" class="app-form-button" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="credits">
+                by
+                <a class="credits-link" href="#" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    style="fill: rgb(249, 207, 1);">
+                    <path d="m20 18-4-5h3l-4-5h2l-5-6-5 6h2l-4 5h3l-4 5h7v4h2v-4z"></path>
+                  </svg>
+                  Luis
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/n.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Otras bibliotecas de Firebase que puedas necesitar (opcional) -->
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
